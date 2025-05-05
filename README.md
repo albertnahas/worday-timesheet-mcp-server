@@ -51,6 +51,15 @@ You can run the MCP inspector tool with this command
 uv run mcp dev server.py
 ```
 
+You may need to launch a Chrome instance with remote debugging enabled:
+
+```bash
+/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-debug
+```
+
+This allows the automation tools to connect to an existing Chrome instance.
+
 ## Usage Examples
 
 ### Workday Timesheets
