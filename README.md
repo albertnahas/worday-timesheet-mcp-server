@@ -4,6 +4,8 @@ This is a POC of how you can build MCP servers on top of web services like Workd
 
 https://github.com/user-attachments/assets/05efbf51-1b95-4bd2-a327-55f1fe2f958b
 
+[Watch Demo Video](./demo.mov)
+
 ## What is MCP?
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open protocol that enables seamless integration between LLM applications and external tools.
