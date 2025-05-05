@@ -2,9 +2,7 @@
 
 This is a POC of how you can build MCP servers on top of web services like Workday.
 
-https://github.com/user-attachments/assets/05efbf51-1b95-4bd2-a327-55f1fe2f958b
-
-[Watch Demo Video](./demo.mov)
+[Watch Demo Video](./demo.dif)
 
 ## What is MCP?
 
