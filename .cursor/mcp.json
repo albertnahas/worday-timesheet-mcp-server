@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+      "worday-timesheet": {
+          "command": "uv",
+          "args": [
+              "--directory",
+              "/Users/albert.nahas/Desktop/dev/workday-timesheet-mcp-server",
+              "run",
+              "server.py"
+          ]
+      }
+  }
+}

@@ -1,0 +1,8 @@
+browser-use
+browser-use[memory]
+playwright
+langchain-anthropic
+langchain-openai
+python-dotenv
+fastmcp 
+mcp[cli]
