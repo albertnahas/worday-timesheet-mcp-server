@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import asyncio
+import os
 from dotenv import load_dotenv
 from mcp.server.fastmcp import FastMCP, Context
 from browser import run_browser_agent
@@ -34,8 +35,11 @@ async def fill_timesheet(
         days_off_list = [day.strip() for day in days_off.split(",")]
         days_off_instruction = f" Skip the following days as they are days off: {', '.join(days_off_list)}."
 
+    # Get Workday URL from environment variable with a fallback
+    workday_url = os.getenv("WORKDAY_URL", "https://wd3.myworkday.com/company/d/home.htmld")
+
     task = f"""
-    1. Go to https://wd3.myworkday.com/doctolib/d/home.htmld
+    1. Go to {workday_url}
     2. Wait for the Workday dashboard to load fully
     3. Scroll down if needed to view all apps
     4. Navigate to Time app (from "View all apps")
@@ -65,7 +69,7 @@ async def perform_timesheet_filling(week_start_date: str, task: str, context: Co
             await context.info(f"Timesheet step {step_count} completed")
             await context.report_progress(step_count)
         
-            # Fall back to generic browser agent if workday module is not available
+        # Fall back to generic browser agent if workday module is not available
         await context.info("Specialized Workday agent not available, using generic browser agent")
         result = await run_browser_agent(task=task, on_step=step_handler, enable_memory=True)
         
@@ -97,4 +101,4 @@ async def get_timesheet_status(request_id: str) -> str:
     return timesheet_status[request_id]
 
 if __name__ == "__main__":
-    mcp.run(transport='stdio') 
+    mcp.run(transport='stdio')

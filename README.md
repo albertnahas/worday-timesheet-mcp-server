@@ -1,9 +1,17 @@
 # Workday Timesheet MCP Server
 
-This is a POC of how you can build MCP servers on top of web services like Workday.
+A server for automatically filling Workday timesheets.
 
-![ezgif-2f78f2ba107bcd](https://github.com/user-attachments/assets/c5c6208a-70cd-4612-a5dd-196f448b6d6a)
+## Environment Variables
 
+Create a `.env` file in the root directory with the following variables:
+
+- `WORKDAY_URL`: Your organization's Workday URL (e.g., https://wd3.myworkday.com/company/d/home.htmld)
+
+Example:
+```
+WORKDAY_URL=https://wd3.myworkday.com/company/d/home.htmld
+```
 
 ## What is MCP?
 
