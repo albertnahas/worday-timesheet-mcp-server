@@ -2,17 +2,6 @@
 
 A server for automatically filling Workday timesheets.
 
-## Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
-
-- `WORKDAY_URL`: Your organization's Workday URL (e.g., https://wd3.myworkday.com/company/d/home.htmld)
-
-Example:
-```
-WORKDAY_URL=https://wd3.myworkday.com/company/d/home.htmld
-```
-
 ## What is MCP?
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open protocol that enables seamless integration between LLM applications and external tools.
@@ -45,6 +34,13 @@ The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open 
 3. Update the `.env` file with your API key:
    ```
    ANTHROPIC_API_KEY=your_openai_api_key_here
+   ```
+   
+4. Add Your organization's Workday URL (e.g., https://wd3.myworkday.com/company/d/home.htmld)
+
+   Example:
+   ```
+   WORKDAY_URL=https://wd3.myworkday.com/company/d/home.htmld
    ```
 
 ## Note
